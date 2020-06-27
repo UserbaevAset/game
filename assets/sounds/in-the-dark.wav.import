@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/in-the-dark.wav-63c44fed66e1aa60964743505a7faf20.sample"
+
+[deps]
+
+source_file="res://assets/sounds/in-the-dark.wav"
+dest_files=[ "res://.import/in-the-dark.wav-63c44fed66e1aa60964743505a7faf20.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

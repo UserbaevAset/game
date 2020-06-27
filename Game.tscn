@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://TileSet.tres" type="TileSet" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://World/dark_bg.jpg" type="Texture" id=6]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[node name="Game" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+collision_layer = 3
+format = 1
+tile_data = PoolIntArray( -524288, 1, 0, -524243, 1, 0, -458752, 1, 0, -458707, 1, 0, -393216, 1, 0, -393171, 1, 0, -327680, 1, 0, -327635, 1, 0, -262144, 1, 0, -262099, 1, 0, -196608, 1, 0, -196563, 1, 0, -131072, 1, 0, -131027, 1, 0, -65536, 1, 0, -65506, 1, 0, -65505, 1, 0, -65504, 1, 0, -65503, 1, 0, -65491, 1, 0, 0, 1, 0, 45, 1, 0, 65536, 1, 0, 65564, 1, 0, 65572, 1, 0, 65581, 1, 0, 131072, 1, 0, 131112, 1, 0, 131113, 1, 0, 131114, 1, 0, 131115, 1, 0, 131117, 1, 0, 196608, 1, 0, 196623, 1, 0, 196624, 1, 0, 196625, 1, 0, 196626, 1, 0, 196627, 1, 0, 196634, 1, 0, 196638, 1, 0, 196641, 1, 0, 196653, 1, 0, 262144, 1, 0, 262149, 1, 0, 262150, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 262159, 1, 0, 262170, 1, 0, 262171, 1, 0, 262177, 1, 0, 262183, 1, 0, 262189, 1, 0, 327680, 1, 0, 327689, 1, 0, 327695, 1, 0, 327707, 1, 0, 327713, 1, 0, 327725, 1, 0, 393216, 1, 0, 393225, 1, 0, 393231, 1, 0, 393237, 1, 0, 393238, 1, 0, 393243, 1, 0, 393261, 1, 0, 458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 458765, 1, 0, 458766, 1, 0, 458767, 1, 0, 458768, 1, 0, 458769, 1, 0, 458770, 1, 0, 458771, 1, 0, 458772, 1, 0, 458773, 1, 0, 458774, 1, 0, 458775, 1, 0, 458776, 1, 0, 458777, 1, 0, 458778, 1, 0, 458779, 1, 0, 458780, 1, 0, 458781, 1, 0, 458782, 1, 0, 458783, 1, 0, 458784, 1, 0, 458785, 1, 0, 458786, 1, 0, 458787, 1, 0, 458788, 1, 0, 458789, 1, 0, 458790, 1, 0, 458791, 1, 0, 458792, 1, 0, 458793, 1, 0, 458794, 1, 0, 458795, 1, 0, 458796, 1, 0, 458797, 1, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+
+[node name="Enemy" parent="." instance=ExtResource( 5 )]
+position = Vector2( 560, 40 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1016, -80 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1368, 0 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 232, 88 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -1
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 672, 448 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+material = SubResource( 1 )
+position = Vector2( 344, 32 )
+scale = Vector2( 1.5, 1 )
+texture = ExtResource( 6 )
